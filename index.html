@@ -400,7 +400,7 @@
 
         <div>
         <a href="./index.html">
-            <span class="logo-accent">Web</span>
+            <span class="logo-accent">web</span>
             <span class="logo-white">studio</span>
         </a>
     <address class="address">
@@ -466,11 +466,52 @@
                 <svg width="30px" height="30px">
                     <use href="./images/icons.svg/closer.svg#close"></use>
                 </svg>
+                
             </button>
 
+            <form class="form-modal">
+            <h2 class="title-modal">Оставьте свои данные, мы вам перезвоним</h2>
+            <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name" placeholder="Иван Иваніч" autofocus>
+            </div>
+            
+            <div class="form-field">
+            <label for="tel">телефон</label>
+            <input type="tel" name="tel" id="tel" autocomplete="off"/>
+            </div>
+
+            <div class="form-field">
+            <label for="email">email</label>
+            <input type="email" name="email" id="email">
+            </div>
+
+
+            
+            <div role="group">
+            <input type="checkbox" name="topic" value="html" id="html">
+            <label for="html">html</label>
+            <br>
+            <label for="opic">Оставьте комментарий</label>
+            <textarea name="opic" id="opic"  rows="10"></textarea>
+            <br>
+            <input type="checkbox" name="ok" id="ok">
+            <label for="ok">Соглашаюсь</label>
+            <br>
+            <button type="button">Отправить</button>
+
+
+            </div>
+            
+
+        </form>
+
         </div>
+
+
     </div   >
     <script src="./js/modal.js"></script>
+
 </body>
 </html>
 

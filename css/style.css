@@ -396,6 +396,7 @@ height: 600px;
 
 /* Modal window */
 .backdrop {
+
     position: fixed;
     top: 0;
     left: 0;
@@ -418,6 +419,7 @@ height: 600px;
 }
 
 .modal {
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -456,6 +458,55 @@ height: 600px;
 .button:hover,
 .buttons:focus{
 background-color: var(--hover-button)
+}
+
+.form-modal {
+    display: block;
+width: 500px;
+height: 100%;
+outline: 1px solid tomato;
+margin-left: auto;
+margin-right: auto;
+padding: 20px;
+
+}
+
+.title-modal {
+    width: 448px;
+    
+    margin: 0px 0px 12px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color); 
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid teal;
+    margin-bottom: 20px;
+}
+
+.form-field input {
+    margin: 0;
+    padding-top:12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+}
+
+.form-field input::placeholder {
+    color: #C4C4C4;
+}
+
+
+
+.form-field label {
+    margin: 4px;
+}
+textarea {
+    resize: none;
 }
 
 
