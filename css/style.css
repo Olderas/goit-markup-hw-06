@@ -24,7 +24,7 @@
 }
 
 
-.body{
+body {
 background-color: var(--primari-white-color);
 color: var(--primari-text-color);
 font-family: Roboto, sans-serif;
@@ -822,8 +822,7 @@ width: 44px;
 height: 44px;
 border-radius: 50px;
 fill: #AFB1B8;;
-transition: background-color 250ms var(--timing-function),
-fill 250ms var(--timing-function);
+transition: background-color 250ms var(--timing-function);
 }
 
 .socials-list {
@@ -1115,8 +1114,7 @@ height: 92px;
 fill: var(--var--bg-icon);
 border: 1px solid var(--var--bg-icon);
 border-radius: 3px;
-transition: border 250ms var(--timing-function),
-fill 250ms var(--timing-function);
+transition: border 250ms var(--timing-function);
 }
 
 
