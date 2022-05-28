@@ -164,7 +164,7 @@ margin-left: 93px;
 }
 
 
-.dede::after {
+.strip::after {
     display: block;
     position: absolute;
     content: '';
@@ -177,7 +177,7 @@ transform: scaleX(t 1);
     transition: 250ms var(--timing-function);
 }
 
-.dede:hover::after {
+.strip:hover::after {
 transform: scaleX(1)
 }
 
@@ -484,19 +484,49 @@ letter-spacing: 0.03em;
     color: var(--title-text-color); 
 }
 
+
+
 .form-field{
+    position: relative;
     display: flex;
     flex-direction: column;
     /* outline: 1px solid teal; */
     margin-bottom: 10px;
 }
 
+/* TEST */
+
+.icon-modal {
+    position: absolute;
+    top: 64%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-50%);
+    transition: transform 500ms linear;
+}
+
+.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label {
+    
+    transform: translateY(-35px);
+}
+
+.form-input:placeholder-shown {
+    background-color: white;
+}
+
+
+/* TEST */
+
 .form-field input {
     width: 448px;
     height: 40px;
     margin: 0;
-    padding-top:12px;
-    padding-bottom: 12px;
     padding-left: 42px;
     border-color: rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -524,6 +554,7 @@ textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     border-width: 1px;
+    
 }
 
 .button-modal {
@@ -540,6 +571,10 @@ border-radius: 4px;
 }
 
 .form-field input::placeholder {
+    color: #C4C4C4;
+}
+
+.form-field textarea::placeholder {
     color: #C4C4C4;
 }
 

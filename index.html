@@ -23,7 +23,7 @@
             <span class="logo-black">Studio</span>
         </a>
     <ul class="site-nav">
-        <li class="item"><a id="studio" class="link dede" href="">Студия</a></li>
+        <li class="item"><a id="studio" class="link strip" href="">Студия</a></li>
         <li class="item"><a class="link" href="./portfolio.html">Портфолио</a></li>
         <li class="item"><a class="link" href="">Контакты</a></li>
     </ul>
@@ -472,23 +472,33 @@
             <form class="form-modal">
             <h2 class="title-modal">Оставьте свои данные, мы вам перезвоним</h2>
             <div class="form-field">
-            <label for="name">Имя</label>
-            <input type="text" name="name" id="name" placeholder="ВИКУСИЧКА МОЯ КИЦЯ" autofocus>
+            
+            <input type="text" class="form-input" name="name" id="name" placeholder="Адресс" autofocus>
+             <label for="name" class="form-label">Имя</label>
+            <!-- <svg class="icon-modal" width="12px" height="12px">
+                <use href="./images/icons.svg/modal-icon.svg#modal-profil"></use>
+            </svg> -->
             </div>
             
             <div class="form-field">
             <label for="tel">Телефон</label>
             <input type="tel" name="tel" id="tel" autocomplete="off"/>
+            <svg class="icon-modal" width="13px" height="13px">
+                <use href="./images/icons.svg/modal-icon.svg#modal-tel"></use>
+            </svg>
             </div>
 
             <div class="form-field">
             <label for="email">Почта</label>
             <input type="email" name="email" id="email" autocomplete="off">
+            <svg class="icon-modal" width="15px" height="12px">
+                <use href="./images/icons.svg/modal-icon.svg#modal-massager"></use>
+            </svg>
             </div>
 
             <div class="form-field">
             <label for="opic">Коментарий</label>
-            <textarea name="opic" id="opic"  rows="10"></textarea>
+            <textarea name="opic" id="opic"  rows="10" placeholder="Введите текст"></textarea>
             </div>
 
             <input type="checkbox" name="ok" id="ok">
