@@ -452,22 +452,28 @@
         </ul>
     </div>
 
+
+       
     <form class="form-footer">
+
         <h2 class="footer-title">Подпишитесь на рассылку</h2>
+
+        <div class="div">
         <label class="footer-label">
-            <input type="text" class="footer-input" name="email">
-            <span class="footer-span"></span>
+            <input type="text" class="footer-input" name="email" placeholder="E-mail">
         </label>
 
             
-            <button class="button-rerere" type="button">Отправить</button>
-
+            <button class="button-footer" type="submit">
+            <span class="footer-span">Подписаться</span>
             <svg class="footer-icon" width="20px" height="20px">
                 <use href="./images/icons.svg/modal-icon.svg#footer-email"></use>
             </svg>
 
-
+            </button>
+            </div>
     </form>
+       
 </div>
      </footer>
      
@@ -543,13 +549,14 @@
                 <use href="./images/icons.svg/modal-icon.svg#modal-massager"></use>
             </svg>
             </div> -->
-
-            <div class="form-field">
-            <label for="opic">Коментарий</label>
+            <span class="title-comment">Коментарий</span>
+            <!-- <label class="title-comment" for="opic">Коментарий</label> -->
+            <div class="form-comment">
+            
             <textarea name="opic" id="opic"  rows="10" placeholder="Введите текст"></textarea>
             </div>
 
-            <label class="field-footer">
+            <label class="field-checkbox">
                 <input class="chekbox" type="checkbox" name="ok" id="ok">
                 <span class="icon-chekbox"></span>
                 <span class="label-footer">Соглашаюсь с рассылкой и принимаю</span>
@@ -558,7 +565,7 @@
             </label>
             
         
-            <button class="button-modal" type="button">Отправить</button>
+            <button class="button-modal" type="submit">Отправить</button>
             
     <div>
         </form>
