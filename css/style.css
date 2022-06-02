@@ -518,6 +518,11 @@ letter-spacing: 0.03em;
     transition: fill 250ms var(--timing-function);
 }
 
+.form-field:hover .icon-modal {
+fill: rgb(14, 161, 230);
+}
+
+
 
 /* MODAL 2 */
 
@@ -635,7 +640,7 @@ letter-spacing: 0.03em;
     position: absolute;
     top: 54%;
     left: 42px;
-    width: 100%;
+    
     transform: translateY(-50%);
     transition: transform 250ms var(--timing-function);
 }
@@ -647,7 +652,7 @@ letter-spacing: 0.03em;
     padding-left: 42px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    transition: border-color 250ms var(--timing-function);
+    transition: border-color 500ms var(--timing-function);
     outline: none;
 }
 
@@ -656,6 +661,7 @@ letter-spacing: 0.03em;
     height: 15px;
 }
 
+.form-field input:hover,
 .form-field input:focus {
     border-color: rgb(14, 161, 230);
 }
@@ -987,6 +993,7 @@ margin-bottom: 16px;
 margin-right: 10px;
 }
 
+/* 11 УБРАЛ ФИЛЛ С socials-links ОСТАВИЛ ФОН И ДОБАВИЛ ФИЛЛ НА SVG!   */
 .socials-links {
 display: inline-flex;
 align-items: center;
@@ -994,9 +1001,27 @@ justify-content: center;
 width: 44px;
 height: 44px;
 border-radius: 50px;
-fill: #AFB1B8;;
+/* fill: #AFB1B8; */
 transition: background-color 250ms var(--timing-function);
 }
+
+.socials-links:hover,
+.socials-links:focus {
+    /* fill: white; */
+    background-color: #188ce8;
+}
+
+
+.socials-links:hover svg {
+    fill: white;
+}
+
+.socials-icon {
+    fill: var(--var--bg-icon);
+    transition:  fill 250ms var(--timing-function);
+    
+}
+/* 11 */
 
 .socials-list {
 display: flex;
@@ -1011,11 +1036,6 @@ margin: 0;
 
 }
 
-.socials-links:hover,
-.socials-links:focus {
-    fill: white;
-    background-color: #188ce8;
-}
 
 
 /* PORTFOLIO */
@@ -1422,9 +1442,9 @@ fill 250ms var(--timing-function);
 
 
 .form-footer {
+    display: flex;
     margin-left: 93px;
-    width: 570px;
-    height: 86px;
+
 }
 
 .footer-span {
@@ -1449,7 +1469,8 @@ outline: none;
 transition: border-color 250ms var(--timing-function);
 }
 
-.footer-input:focus {
+.footer-input:focus,
+.footer-input:hover {
     border-color: #2196F3;
 }
 
@@ -1465,6 +1486,7 @@ line-height: 1.2;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #FFFFFF;
+margin-left: 93px;
 }
 
 .footer-label input::placeholder {
@@ -1485,7 +1507,7 @@ color: rgba(255, 255, 255, 0.6);
 display: flex;
 align-items: center;
 justify-content: center;
-background: #2196F3;
+background: var(--accent-color);
 width: 200px;
 height: 50px;
 
@@ -1493,12 +1515,15 @@ color: white;
 border: none;
 border-radius: 4px;
 margin-left: 20px;
-transition: box-shadow 250ms var(--timing-function);
+transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
+
+.button-footer:hover,
 .button-footer:focus {
      
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+     background-color: var(--hover-button);
 }
 
 .footer-span {
@@ -1511,9 +1536,6 @@ letter-spacing: 0.06em;
     color: #FFFFFF;
 }
 
-.div {
-    display: flex;
-}
 
 
 
