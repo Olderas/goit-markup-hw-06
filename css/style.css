@@ -431,13 +431,14 @@ height: 600px;
 
     width: 528px;
     height: 581px;
-
+    padding: 40px;
     background-color: #fff;
     
 }
 
 
 .button-close {
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
@@ -445,14 +446,32 @@ height: 600px;
     height: 30px;
     margin-top: 8px;
     margin-right: 8px;
+    fill: black;
     border: none;
-    background-color: #ffffff00;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: white;
+    transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function) ;
+}
+
+.button-close:hover {
+    fill: #2196F3;
+    border-color: #2196F3;
 }
 
 .button-close svg {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    left: 30%;
+
+    transform: translateY(-50%);
+
+}
+
+.icon-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -464,12 +483,12 @@ background-color: var(--hover-button)
 
 .form-modal {
     display: block;
-width: 500px;
+
 height: 100%;
 /* outline: 1px solid tomato; */
 margin-left: auto;
 margin-right: auto;
-padding: 40px 20px 100px 20px;
+transform:;
 
 }
 
@@ -477,7 +496,8 @@ padding: 40px 20px 100px 20px;
 font-weight: 700;
 font-size: 20px;
 line-height: 1.15;
-    
+width: 448px;
+height: 23px;
 letter-spacing: 0.03em;
 color: #212121;
 text-align: center;
@@ -514,12 +534,13 @@ letter-spacing: 0.03em;
     position: absolute;
     top: 50%;
     left: 15px;
+    fill: var(--title-text-color);
     transform: translateY(-50%);
     transition: fill 250ms var(--timing-function);
 }
 
 .form-field:hover .icon-modal {
-fill: rgb(14, 161, 230);
+fill: #2196F3;
 }
 
 
@@ -544,23 +565,23 @@ transform: translateY(-50px);
 
 
 /* Modal 1 Хороший ВАРИАНТ! */ 
-/* .form-input:focus~.icon-modal,
+.form-input:focus~.icon-modal,
 .form-input:hover~.icon-modal {
     fill: var(--accent-color);
 }
 
 
 .form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label {
-    transform: translateY(-32px);
+    transform: translateY(-37px);
 }
 
 .form-input:placeholder-shown {
     background-color: white;
-} */
+}
 
 
 /* MODAL 3 в процессе без ID и bez LABEL */
-
+/* 
 .form-field:focus-within > .icon-modal {
     fill: rgb(14, 161, 230);
 }
@@ -570,9 +591,10 @@ transform: translateY(-50px);
     transform: translateY(-210%);
 }
 
+
 .form-input:not(:placeholder-shown) + .form-label {
 transform: translateY(-35px);
-}
+} */
 
 .chekbox {
 /*     
@@ -605,6 +627,11 @@ transform: translateY(-35px);
     margin-right: 8px;
 }
 
+.icon-chekbox:focus,
+.icon-chekbox:hover {
+    border-color: #2196F3;
+}
+
 .links-checkbox {
     font-size: 12px;
     line-height: 1.2;
@@ -620,6 +647,12 @@ font-size: 12px;
 line-height: 1.2;
 letter-spacing: 0.03em;
 }
+
+.label-footer:hover,
+.label-footer:focus {
+ color: #2196F3;
+}
+
 
 .chekbox:checked + .icon-chekbox {
     border-color: #2196F3;
@@ -649,11 +682,17 @@ letter-spacing: 0.03em;
     width: 448px;
     height: 40px;
     margin: 0;
+    cursor: pointer;
     padding-left: 42px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    transition: border-color 500ms var(--timing-function);
+    transition: border-color 250ms var(--timing-function);
     outline: none;
+}
+
+.form-field input:hover,
+.form-field input:focus {
+    border-color: #2196F3;
 }
 
 .form-field input[type="checkbox"] {
@@ -661,10 +700,6 @@ letter-spacing: 0.03em;
     height: 15px;
 }
 
-.form-field input:hover,
-.form-field input:focus {
-    border-color: rgb(14, 161, 230);
-}
 
 /* .form-field:focus-within>.form-input {
    color: rgb(14, 161, 230);
@@ -677,6 +712,7 @@ textarea {
     padding-right: 16px;
     padding-bottom: 12px ;
     padding-top: 12px ;
+    cursor: pointer;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color 250ms var(--timing-function);
@@ -688,8 +724,9 @@ textarea {
     margin-bottom: 4px;
 }
 
+.form-comment textarea:hover,
 .form-comment textarea:focus {
-    border-color: rgb(14, 161, 230);
+    border-color: #2196F3;
 }
 
 .button-modal {
@@ -705,16 +742,19 @@ line-height: 1.88;
 letter-spacing: 0.06em;
 border: none;
 border-radius: 4px;
-transition: box-shadow 250ms var(--timing-function);
+transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 width: 200px;
 height: 50px;
 
 }
 
+.button-modal:hover,
 .button-modal:focus {
 outline: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--hover-button);
 }
+
 
 .form-field input::placeholder {
     color: #C4C4C4;
